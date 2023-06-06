@@ -44,7 +44,7 @@ setTimeout (() => {
     } catch (e) {
         header.innerHTML = 'Falha ao buscar dados!'
         main.innerHTML = e+'<br>'
-        main.innerHTML += '<p>Atualize a página ou tente novamente em alguns instantes<>'
+        main.innerHTML += '<p>Atualize a página ou tente novamente em alguns instantes</p>'
         return ;
     }
 
