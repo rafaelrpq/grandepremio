@@ -1,0 +1,39 @@
+{
+    "name": "Corridas do fim de semana",
+    "short_name": "Grande Prêmio",
+    "icons": [{
+        "src": "./res/128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },{
+        "src": "./res/192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+    },{
+        "src": "./res/256.png",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "maskable"
+    },{
+        "src": "./res/512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "id": "./grandepremio",
+    "scope": "./",
+    "start_url": "./",
+    "description": "Corridas do fim de semana",
+    "background_color": "#a00",
+    "theme_color": "#a00",
+    "display": "standalone",
+    "lang": "pt",
+    "dir": "ltr",
+    "orientation": "any",
+    "display_override": [
+        "standalone"
+    ],
+    "categories": [
+        "utilities"
+    ]
+}
