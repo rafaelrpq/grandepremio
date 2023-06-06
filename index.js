@@ -43,7 +43,8 @@ setTimeout (() => {
         atual = html.querySelectorAll ('a.programacao-tv')[0].getAttribute ('href')
     } catch (e) {
         header.innerHTML = 'Falha ao buscar dados!'
-        main.innerHTML = e
+        main.innerHTML = e+'<br>'
+        main.innerHTML += 'Atualize a página ou tente novamente em alguns instantes'
         return ;
     }
 
