@@ -40,17 +40,17 @@ let main = document.querySelector ('main')
 
 scrap (host).then (() => { 
     setTimeout (() => {
-        try {
-            html  = parser.parseFromString (dados.data, 'text/html')
+        // try {
+        //     html  = parser.parseFromString (dados.data, 'text/html')
             
-            atual = html.querySelectorAll ('a.programacao-tv')[0].getAttribute ('href')
+        //     atual = html.querySelectorAll ('a.programacao-tv')[0].getAttribute ('href')
             
-        } catch (e) {
-            header.innerHTML = 'Falha ao a.programacao-tv!'
-            main.innerHTML = e+'<br>'
-            main.innerHTML += '<p>Atualize a página ou tente novamente em alguns instantes</p>'
-            return ;
-        }
+        // } catch (e) {
+        //     header.innerHTML = 'Falha ao a.programacao-tv!'
+        //     main.innerHTML = e+'<br>'
+        //     main.innerHTML += '<p>Atualize a página ou tente novamente em alguns instantes</p>'
+        //     return ;
+        // }
 
     // scrap (atual)
     
