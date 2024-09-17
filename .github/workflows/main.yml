@@ -1,0 +1,6 @@
+name: env var
+
+jobs:
+    my-job:
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
