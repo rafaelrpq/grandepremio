@@ -39,7 +39,7 @@ let main = document.querySelector ('main')
 
 
 scrap (host).then (() => { 
-    setTimeout (() => {
+    // setTimeout (() => {
         // try {
         //     html  = parser.parseFromString (dados.data, 'text/html')
             
@@ -73,7 +73,7 @@ scrap (host).then (() => {
                     //         return;
                     //     }
                     // },5000)
-                }, 5000)
+                // }, 5000)
                 
                 
         if ('serviceWorker' in navigator) {
