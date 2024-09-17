@@ -9,9 +9,6 @@
 //     console.error ('error => ',e)
 // })
 
-const github = {{ github }};
-console.log(github.env.GITHUB_TOKEN);
-
 let dados = {}
 let host = 'https://grandepremio.com.br/programacao-da-tv'
 async function scrap (host) {
