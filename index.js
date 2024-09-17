@@ -39,45 +39,45 @@ let main = document.querySelector ('main')
 
 
 scrap (host).then (() => { 
-    // setTimeout (() => {
-        // try {
-        //     html  = parser.parseFromString (dados.data, 'text/html')
+    setTimeout (() => {
+        try {
+            html  = parser.parseFromString (dados.data, 'text/html')
             
-        //     atual = html.querySelectorAll ('a.programacao-tv')[0].getAttribute ('href')
+            atual = html.querySelectorAll ('a.programacao-tv')[0].getAttribute ('href')
             
-        // } catch (e) {
-        //     header.innerHTML = 'Falha ao a.programacao-tv!'
-        //     main.innerHTML = e+'<br>'
-        //     main.innerHTML += '<p>Atualize a página ou tente novamente em alguns instantes</p>'
-        //     return ;
-        // }
+        } catch (e) {
+            header.innerHTML = 'Falha ao a.programacao-tv!'
+            main.innerHTML = e+'<br>'
+            main.innerHTML += '<p>Atualize a página ou tente novamente em alguns instantes</p>'
+            return ;
+        }
 
-    // scrap (atual)
-    
-    // setTimeout ( () => {
-        //     try {
-            //         html  = parser.parseFromString (dados.data, 'text/html')
-            //         titulos = html.querySelectorAll ('h2 strong, h3 strong')
-            //         tabelas = html.querySelectorAll ('table')
-            //         main.innerHTML = ''
+        scrap (atual);
+
+        setTimeout ( () => {
+            try {
+                html  = parser.parseFromString (dados.data, 'text/html')
+                titulos = html.querySelectorAll ('h2 strong, h3 strong')
+                tabelas = html.querySelectorAll ('table')
+                main.innerHTML = ''
+
+                tabelas.forEach ((tabela, i) => {
+                    main.innerHTML+= `<span>${titulos[i].innerText}</span>`
+                    main.append (tabela)
+                })
+                header.innerHTML = 'Grande Prêmio - Programação do Fim de Semana'
+
+                } catch (e) {
+                    header.innerHTML = 'Falha ao buscar dados!'
+                    main.innerHTML = e
+                    return;
+                }
+        },5000);
+    }, 5000);
             
-            //         tabelas.forEach ((tabela, i) => {
-                //             main.innerHTML+= `<span>${titulos[i].innerText}</span>`
-                //             main.append (tabela)
-                //         })
-                //         header.innerHTML = 'Grande Prêmio - Programação do Fim de Semana'
-                
-                //     } catch (e) {
-                    //         header.innerHTML = 'Falha ao buscar dados!'
-                    //         main.innerHTML = e
-                    //         return;
-                    //     }
-                    // },5000)
-                // }, 5000)
-                
-                
-        if ('serviceWorker' in navigator) {
-            window.addEventListener ('load', () => {
+            
+    if ('serviceWorker' in navigator) {
+        window.addEventListener ('load', () => {
             navigator.serviceWorker.register ('sw.js')
             .then (reg => {
                 console.log ('registrado!')
@@ -86,7 +86,7 @@ scrap (host).then (() => {
             .catch (err => {
                 console.log ('falha ao registrar')
                 console.log (err)
-            })
-        })
+            });
+        });
     }
-})
+});
