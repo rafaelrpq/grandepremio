@@ -9,8 +9,8 @@
 //     console.error ('error => ',e)
 // })
 
-const github = {{ github | json }};
-console.log(github.env.GITHUB_TOKEN);
+const github = { github | json };
+console.log(github.env.API_NINJAS_TOKEN);
 
 let dados = {}
 let host = 'https://grandepremio.com.br/programacao-da-tv'
